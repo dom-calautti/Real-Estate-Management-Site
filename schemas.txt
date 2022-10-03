@@ -1,0 +1,44 @@
+DB models:
+
+LISTING##
+
+id: INT
+realtor INT (foreign key [realtor])
+title: STR
+address: STR
+city : STR
+province: STR
+postal: STR
+description: TEXT
+bedroom: INT
+price: INT
+bathroom: INT
+garagel INT default 0
+sqft: INT
+lot_size: FLOAT
+is_published BOOLEAN default:[true]
+list_date: DATE
+photo_main: STR   (STR cause we save a str of a path to photo not the actual photo)
+photo_1: STR
+...
+photo_6: STR
+
+REALTOR##
+id: INT
+name: STR
+photo: STR
+description: TEXT
+is_MVP: BOOL default 0
+hire_date: DATE
+
+
+CONTACT##
+id: INT
+user_id INT
+Listing: INT
+listing_id: INT
+name: STR
+email: STR
+phonE: STR
+mesg: TEXT
+contact_date: DATE
